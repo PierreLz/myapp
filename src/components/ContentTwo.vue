@@ -1,21 +1,24 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
+  <div class="content_two">
+    <h2> {{ message }} </h2>
   </div>
 </template>
 
 <script lang="ts">
+
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import Click from './Click.vue';
 
 @Component
-export default class HelloWorld extends Vue {
-  @Prop() private msg!: string;
+
+export default class ContentTwo extends Vue {
+  @Prop(String) message: string;
 }
+
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
+h1 {
   margin: 40px 0 0;
 }
 ul {
